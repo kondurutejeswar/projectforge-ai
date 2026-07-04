@@ -4,8 +4,8 @@ import { motion, useInView, useMotionValue, useTransform, animate } from 'framer
 import { useEffect, useRef } from 'react';
 
 const stats = [
-  { value: 60, suffix: '+', label: 'IEEE Projects Delivered' },
-  { value: 500, suffix: '+', label: 'Students Helped' },
+  { value: 20, suffix: '+', label: 'IEEE Projects Delivered' },
+  { value: 10, suffix: '+', label: 'Students Helped' },
   { value: 7, suffix: '', label: 'Tech Domains Covered' },
   { value: 98, suffix: '%', label: 'Panel Approval Rate' },
 ];
