@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           <p className="text-xs text-slate-600 font-mono">
-            © {new Date().getFullYear()} ProjectForge.AI — built for CSE/IT final-years.
+            © 2026 ProjectForge.AI — built for CSE/IT final-years.
           </p>
         </div>
       </div>
