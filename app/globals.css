@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-base-950 text-slate-200 font-body antialiased;
+    background-image: theme('backgroundImage.grid-glow');
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-slate-50 tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-signal-green/30 text-slate-50;
+  }
+
+  /* Visible keyboard focus everywhere */
+  :focus-visible {
+    outline: 2px solid theme('colors.signal.green');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Terminal-window chrome used on project cards — the site's signature motif */
+  .terminal-frame {
+    @apply relative rounded-xl border border-white/10 bg-base-900/80 backdrop-blur-sm overflow-hidden;
+    background-image: theme('backgroundImage.terminal-grid');
+    background-size: theme('backgroundSize.grid-16');
+  }
+
+  .terminal-dots span {
+    @apply inline-block w-2.5 h-2.5 rounded-full;
+  }
+
+  .tag-chip {
+    @apply font-mono text-[11px] px-2 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-signal-green text-base-950 font-semibold px-6 py-3 transition-all duration-200 hover:shadow-glow-green hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg border border-signal-blue/50 text-signal-blue font-semibold px-6 py-3 transition-all duration-200 hover:bg-signal-blue/10 hover:shadow-glow-blue hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg bg-[#25D366] text-base-950 font-semibold px-6 py-3 transition-all duration-200 hover:shadow-[0_0_0_1px_rgba(37,211,102,0.5),0_0_24px_rgba(37,211,102,0.35)] hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em] text-signal-green;
+  }
+
+  .glass-panel {
+    @apply rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-sm;
+  }
+}
